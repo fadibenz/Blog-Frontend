@@ -17,6 +17,7 @@ import Menu from "./components/Menu";
 import Search from "./pages/Search";
 import Loading from "./components/Loading";
 import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -54,15 +55,17 @@ const App = () => {
       <div className='container lg:p-12 '>
         <Notification />
         <Menu />
-        <Routes>
-          <Route path='/login' element={<Login />}></Route>
-          <Route path='/register' element={<Register />} />
-          <Route path='/' element={<Layout />}>
-            <Route path='/' element={<Blogs />} />
-            <Route path='/blog/:id' element={<Blog blog={chosenBlog} />} />
-            <Route path='/search' element={<Search />} />
-          </Route>
-        </Routes>
+        <ScrollToTop>
+          <Routes>
+            <Route path='/login' element={<Login />}></Route>
+            <Route path='/register' element={<Register />} />
+            <Route path='/' element={<Layout />}>
+              <Route path='/' element={<Blogs />} />
+              <Route path='/blog/:id' element={<Blog blog={chosenBlog} />} />
+              <Route path='/search' element={<Search />} />
+            </Route>
+          </Routes>
+        </ScrollToTop>
       </div>
     </div>
   );

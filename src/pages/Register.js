@@ -40,7 +40,7 @@ export default function Register() {
   }
 
   return (
-    <div className='flex justify-center '>
+    <div className='flex justify-center mb-20'>
       <div className='border-2 border-gray-400 p-12 w-7/12 pb-5 md:w-full '>
         <h2 className='text-center font-bold text-3xl mb-6 text-black '>
           Register
