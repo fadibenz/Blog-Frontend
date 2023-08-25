@@ -51,11 +51,11 @@ const App = () => {
   }
 
   return (
-    <div>
-      <div className='container lg:p-12 '>
-        <Notification />
-        <Menu />
-        <ScrollToTop>
+    <ScrollToTop>
+      <div>
+        <div className='container lg:p-12 '>
+          <Notification />
+          <Menu />
           <Routes>
             <Route path='/login' element={<Login />}></Route>
             <Route path='/register' element={<Register />} />
@@ -65,9 +65,9 @@ const App = () => {
               <Route path='/search' element={<Search />} />
             </Route>
           </Routes>
-        </ScrollToTop>
+        </div>
       </div>
-    </div>
+    </ScrollToTop>
   );
 };
 
